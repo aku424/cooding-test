@@ -5,13 +5,8 @@
         "../scss/style.scss",
         "../scss/_reset.scss",
         "../scss/_mixin.scss",
-        "../scss/_common-style.scss",
-        "../scss/_index.scss",
-        "../scss/_about.scss",
-        "../scss/_works.scss",
-        "../scss/_blog.scss",
-        "../scss/_contact.scss",
-        "../scss/_contact-after.scss"
+        "../scss/_common.scss",
+        "../scss/_index.scss"
     ],
     "names": [],
     "file": "style.css"
