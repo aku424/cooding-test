@@ -27,9 +27,202 @@ $breakpoints: (
 }
 
 // color
+$c-main: #192F60;
+$c-contact: #20868A;
+$c-f__bg: #EFF1F4;
+$c-search: #AEB6C7;
+$c-bg__compere: #D3DBEC;
+$c-f__base: #333333;
 
 
 // font-size
+$fz-base: 14px;
+$fz-h2__pc: 28px;
+$fz-h2__sp: 20px;
+$fz-nav__ja: 16px;
+$fz-nav__en: 13px;
 
+//font-family
+// $ff-base: ;//平成角ゴシックstd
+// $ff-en: ;//英語、数字
 
-//font-weight
+//hoverしたら矢印が右に動く
+@mixin m-arrow($color: #fff, $a-color:#fff, $right: 0, $a-right: 0) {
+    a{
+        position: relative;
+
+        &::before{
+            position: absolute;
+            content: "";
+            transform: translate(-100%, -50%);
+            top: 50%;
+            right: $right;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 5px 0 5px 5px;
+            border-color: transparent transparent transparent $color;
+            transition: right .3s, ;
+            
+        }
+    }
+    &:hover{
+        a{
+            &::before{
+                right: $a-right;
+                border-color: transparent transparent transparent $a-color;
+            }
+        }
+    }
+}
+
+//hoverで背景反転
+@mixin h-bg ($b-bg, $a-bg, $b-c, $a-c) {
+    background-color: $b-bg;
+    transition: background-color .3s;
+    
+    a{
+        color: $b-c;
+    }
+
+    .svg{
+        fill: $b-c;
+    }
+
+    &:hover{
+        background-color: $a-bg;
+        a{
+            color: $a-c;
+        }
+
+        svg{
+            fill: $a-c;
+        }
+    }
+}
+
+//btn
+@mixin m-btn($height, $border-c){
+    width: 240px;
+    height: $height;
+    border: 1px solid $border-c;
+    
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+}
+
+//電話問い合わせの継承スタイル
+%m-tel{
+    a{
+        span{
+            // font-family: $en;
+            font-size: 24px;
+        }
+
+        svg{
+            width: 16px;
+            height: 16px;
+        }
+
+        small{
+            display: block;
+            font-size: 16px;
+        }
+    }
+}
+
+//pのタイトル
+%m-txt{
+    font-size: $fz-h2__pc;
+    color: #fff;
+    
+    span{
+        display: inline-block;
+        background-color: $c-main;
+        margin-bottom: 10px;
+        padding: 13px 16px;
+        line-height: 1;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    @include mq(sm){
+        font-size: $fz-h2__sp;
+    }
+}
+
+%bg-style {
+    position: relative;
+
+    .m-title{
+        position: absolute;
+        content: "";
+        width: calc((335 / 1156) * 100%);
+        padding-top: 54.56%;
+        top: 0;
+        background-size: contain;
+        background-position: center;
+        background-image: url(/img/pc/bg_index_04.png);
+        z-index: 0;
+
+        @include mq(sm){
+            // width: calc((160 / 676) * 100%);
+            // padding-top: 23.668%;
+            // background-image: url(/img/sp/bg_index_03.png);
+        }
+
+        h2{
+            position: absolute;
+            top: 0;
+            font-size: 77px;
+            color: $c-f__bg;
+            display: inline-block;
+            // font-family: $en;
+        }
+    }
+}
+
+%bg-style__right{
+    .m-title{
+        right: 0;
+        
+        h2{
+            transform: rotate(90deg) translate(40%, -175%);
+            right: 0;
+        }
+    }
+}
+
+%bg-style__left{
+    .m-title{
+        left: 0;
+        h2{
+            transform: rotate(90deg) translate(40%, 175%);
+            left: 0
+        }
+    }
+}
+
+.section-01{
+    height: 1000px;
+
+    .inner{
+        @extend %bg-style;
+        @extend %bg-style__left;
+    }
+}
+
+.section-02{
+    height: 1000px;
+
+    .inner{
+        @extend %bg-style;
+        @extend %bg-style__right;
+    }
+}

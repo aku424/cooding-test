@@ -1,0 +1,42 @@
+a{
+    text-decoration: none;
+}
+
+p{
+    line-height: 1.85714em;
+    color: $c-f__base;
+}
+
+.m-txt{
+    @extend %m-txt;
+}
+
+.m-btn__contact{
+    @include  m-arrow(#fff,$c-contact, 49px, 39px);
+    @include h-bg ($c-contact, #fff, #fff, $c-contact);
+    @include m-btn (56px, $c-contact);
+}
+
+.m-btn__more{
+    @include  m-arrow($c-main, #fff, 40px, 30px);
+    @include h-bg (#fff, $c-main, $c-main, #fff);
+    @include m-btn (40px, $c-main);
+}
+
+.m-btn__tel{
+    @include  m-arrow;
+    @include h-bg ($c-main, #fff, #fff, $c-main);
+    @include m-btn (56px, $c-main);
+    @extend %m-tel;
+
+    a{
+        flex-flow: column;
+        &::before{
+            display: none;
+        }
+    }
+}
+
+.section{
+
+}

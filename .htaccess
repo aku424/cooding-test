@@ -1,1 +1,9 @@
 AuthType Basic
+AuthUserFile "/home/taaatooo/taaatooo.xsrv.jp/htpasswd/cooding-test/.htpasswd"
+AuthGroupFile /dev/null
+AuthName "Input ID and Password."
+AuthType Basic
+require valid-user
+<Files ~ "^.(htpasswd|htaccess)$">
+    deny from all
+</Files>
