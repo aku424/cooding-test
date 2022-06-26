@@ -166,6 +166,7 @@ $ff-en: neue-haas-grotesk-text, sans-serif;//英語、数字
 
 %bg-style {
     position: relative;
+    z-index: 0;
 
     .m-title{
         position: absolute;
@@ -176,7 +177,6 @@ $ff-en: neue-haas-grotesk-text, sans-serif;//英語、数字
         background-size: contain;
         background-position: center;
         background-image: url(../../img/pc/bg_index_04.png);
-        z-index: 0;
 
         @include mq(sm){
             // width: calc((160 / 676) * 100%);
@@ -186,7 +186,7 @@ $ff-en: neue-haas-grotesk-text, sans-serif;//英語、数字
 
         h2{
             position: absolute;
-            top: 0;
+            top: 50px;
             font-size: 77px;
             color: $c-f__bg;
             display: inline-block;
@@ -201,7 +201,7 @@ $ff-en: neue-haas-grotesk-text, sans-serif;//英語、数字
         
         h2{
             transform: rotate(90deg) translate(40%, -175%);
-            right: 0;
+            right: -30px;
         }
     }
 }
@@ -211,25 +211,19 @@ $ff-en: neue-haas-grotesk-text, sans-serif;//英語、数字
         left: 0;
         h2{
             transform: rotate(90deg) translate(40%, 175%);
-            left: 0
+            left: -30px;
         }
     }
 }
 
 .section-01{
-    height: 1000px;
-
     .inner{
-        @extend %bg-style;
         @extend %bg-style__left;
     }
 }
 
 .section-02{
-    height: 1000px;
-
     .inner{
-        @extend %bg-style;
         @extend %bg-style__right;
     }
 }

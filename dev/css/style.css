@@ -97,11 +97,12 @@ img {
   }
 }
 
-.section-01 .inner, .section-02 .inner {
+.inner {
   position: relative;
+  z-index: 0;
 }
 
-.section-01 .inner .m-title, .section-02 .inner .m-title {
+.inner .m-title {
   position: absolute;
   content: "";
   width: calc((335 / 1156) * 100%);
@@ -110,12 +111,11 @@ img {
   background-size: contain;
   background-position: center;
   background-image: url(../../img/pc/bg_index_04.png);
-  z-index: 0;
 }
 
-.section-01 .inner .m-title h2, .section-02 .inner .m-title h2 {
+.inner .m-title h2 {
   position: absolute;
-  top: 0;
+  top: 50px;
   font-size: 77px;
   color: #EFF1F4;
   display: inline-block;
@@ -129,25 +129,17 @@ img {
 .section-02 .inner .m-title h2 {
   -webkit-transform: rotate(90deg) translate(40%, -175%);
           transform: rotate(90deg) translate(40%, -175%);
-  right: 0;
+  right: -30px;
 }
 
-.section-01 .inner .m-title {
+.section-01 .inner .m-title, .concept .inner .m-title {
   left: 0;
 }
 
-.section-01 .inner .m-title h2 {
+.section-01 .inner .m-title h2, .concept .inner .m-title h2 {
   -webkit-transform: rotate(90deg) translate(40%, 175%);
           transform: rotate(90deg) translate(40%, 175%);
-  left: 0;
-}
-
-.section-01 {
-  height: 1000px;
-}
-
-.section-02 {
-  height: 1000px;
+  left: -30px;
 }
 
 /*====================================================================
@@ -168,6 +160,14 @@ a {
 p {
   line-height: 1.85714em;
   color: #333333;
+}
+
+.inner {
+  max-width: 1154px;
+  margin: auto;
+  padding: 0 32px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .m-btn__contact {
@@ -490,6 +490,52 @@ main {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+}
+
+.concept .inner {
+  margin-top: 93px;
+}
+
+.concept-contents {
+  position: relative;
+  margin-left: 10.836vw;
+  z-index: 1;
+}
+
+.concept-contents__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.concept-contents__main-img img {
+  max-width: 475px;
+  max-height: 317px;
+  width: 34.77vw;
+  height: 23.206vw;
+}
+
+.concept-contents__main-text {
+  text-align: right;
+}
+
+.concept-contents__main-text--price {
+  font-size: 20px;
+  margin-top: 38px;
+}
+
+.concept-contents__main-text--price span {
+  font-size: 60px;
+  font-family: neue-haas-grotesk-text, sans-serif;
+}
+
+.concept-contents__text {
+  margin-top: 40px;
+}
+
+.concept-contents .m-btn__more {
+  margin: auto;
+  margin-top: 40px;
 }
 
 /*====================================================================

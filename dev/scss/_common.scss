@@ -15,6 +15,14 @@ p{
     color: $c-f__base;
 }
 
+.inner{
+    max-width: 1154px;
+    margin: auto;
+    padding: 0 32px;
+    box-sizing: border-box;
+    @extend %bg-style;
+}
+
 .m-txt{
     @extend %m-txt;
 }
@@ -36,6 +44,10 @@ p{
     @include h-bg ($c-main, #fff, #fff, $c-main);
     @include m-btn (56px, $c-main);
     @extend %m-tel;
+}
+
+.m-txt{
+    @extend %m-txt;
 }
 
 .section{

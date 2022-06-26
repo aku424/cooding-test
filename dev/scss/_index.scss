@@ -113,3 +113,54 @@ main{
 
     }
 }
+
+.concept{
+    .inner{
+        margin-top: 93px;
+        @extend %bg-style__left;
+    }
+
+    &-contents{
+        position: relative;
+        margin-left: 10.836vw;
+        z-index: 1;
+
+        &__main{
+            display: flex;
+
+            &-img{
+                img{
+                    max-width: 475px;
+                    max-height: 317px;
+                    width: 34.77vw;
+                    height: 23.206vw;
+                }
+            }
+
+            &-text{
+                text-align: right;
+
+                &--price{
+                    font-size: 20px;
+                    margin-top: 38px;
+                    
+                    span{
+                        font-size: 60px;
+                        font-family: $ff-en;
+                    }
+                }
+            }
+        }
+
+        &__text{
+            margin-top: 40px;
+        }
+
+        .m-btn__more{
+            margin: auto;
+            margin-top: 40px;
+        }
+    }
+
+
+}
