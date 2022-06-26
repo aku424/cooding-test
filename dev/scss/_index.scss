@@ -1,1 +1,115 @@
+main{
+    padding-top: 80px;
+}
 
+.mv{
+    background-image: url(../../img/pc/mv_index_01.png);
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 80px);
+    
+    &-inner{
+        padding-left: 8.27%;
+        position: relative;
+        padding-top: calc(100vh - 80px) ;
+    
+    }
+
+    &-contents{
+        position: absolute;
+        top: 15vw;
+
+        &__btn{
+            display: flex;
+            
+            .m-btn__tel{
+                margin-right: 80px;
+            }
+        }
+        
+            %mv-text{
+                color: $c-main;
+        
+                
+                > span{
+                    font-weight: bold;
+                    display: inline-block;
+                    background-color: #fff;
+                    line-height: 1;
+                    padding: 13px 16px;
+                    margin-bottom: 6px;
+        
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        
+            p{
+                margin-bottom: 24px;
+                @extend %mv-text;
+                font-size: 18px;
+        
+                strong{
+                    @extend %mv-text;
+                    font-size: 60px;
+                }
+        
+                &:last-of-type{
+                    margin-bottom: 84px;
+                }
+            }
+    }
+
+    &-news{
+        position: absolute;
+        display: flex;
+        bottom: -60px;
+        right: 0;
+        height: 80px;
+        align-items: center;
+        background-color: rgba(255, 255, 255, .95);
+        width: calc((100% -  8.27%));
+        padding: 26px 40px;
+
+        &__title{
+
+            span{
+                position: relative;
+                font-family: $ff-en;
+                font-weight: bold;
+                font-size: 22px;
+                padding-right: 22px;
+
+                &::before{
+                    position: absolute;
+                    content: "";
+                    width: 1px;
+                    height: 26px;
+                    background: $c-f__base;
+                    top: 0;
+                    right: 0;
+                }
+            }
+        }
+        &__item{
+
+            a{
+                display: flex;
+                align-items: center;
+                padding-left: 8.64vw;
+                font-size: 16px;
+                color:  #2D2D2D;
+
+                time{
+                    margin-right: 32px;
+
+                }
+                p{
+                    height: fit-content;
+                }
+            }
+        }
+
+    }
+}
