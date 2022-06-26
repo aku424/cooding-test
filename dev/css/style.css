@@ -96,7 +96,7 @@ img {
   top: 0;
   background-size: contain;
   background-position: center;
-  background-image: url(/img/pc/bg_index_04.png);
+  background-image: url(../../img/pc/bg_index_04.png);
   z-index: 0;
 }
 
