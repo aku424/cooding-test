@@ -836,4 +836,63 @@ main {
 /*====================================================================
                     footer
 ====================================================================*/
+.footer p {
+  color: #fff;
+  text-align: center;
+}
+
+.footer-contact {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-image: url(../../img/pc/bg_index_03.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.footer-contact p {
+  font-size: 24px;
+  letter-spacing: 2.4px;
+  margin-bottom: 40px;
+}
+
+.footer-contact__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-contact__btn .m-btn__tel {
+  margin-right: 80px;
+}
+
+.footer-info {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #192F60;
+  text-align: center;
+}
+
+.footer-logo {
+  width: 124px;
+  height: 48px;
+  margin: auto;
+  margin-bottom: 24px;
+}
+
+.footer-address {
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.footer small {
+  text-align: center;
+}
+
+.footer small a {
+  color: #AEB6C7;
+  font-size: 11px;
+}
 /*# sourceMappingURL=style.css.map */

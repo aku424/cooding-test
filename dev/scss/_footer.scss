@@ -1,0 +1,57 @@
+.footer{
+    
+    p{
+        color: #fff;
+        text-align: center;
+    }
+    
+    &-contact{
+        padding-top: 80px;
+        padding-bottom: 80px;
+        background-image: url(../../img/pc/bg_index_03.png);
+        background-size: cover;
+        background-position: center;
+
+        p{
+            font-size: 24px;
+            letter-spacing: 2.4px;
+            margin-bottom: 40px;
+        }
+
+        &__btn{
+            display: flex;
+            justify-content: center;
+
+            .m-btn__tel{
+                margin-right: 80px;
+            }
+        }
+    }
+
+    &-info{
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: $c-main;
+        text-align: center;
+    }
+
+    &-logo{
+        width: 124px;
+        height: 48px;
+        margin: auto;
+        margin-bottom: 24px;
+    }
+
+    &-address{
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    small{
+        text-align: center;
+        a{
+            color: $c-search;
+            font-size: 11px;
+        }
+    }
+}
