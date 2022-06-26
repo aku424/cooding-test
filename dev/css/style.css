@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*====================================================================
                     reset
 ====================================================================*/
@@ -132,17 +133,17 @@ img {
   right: 60px;
 }
 
-.section-01 .inner .m-title, .concept .inner .m-title {
+.section-01 .inner .m-title, .concept .inner .m-title, .works .m-title {
   left: 0;
 }
 
-.section-01 .inner .m-title h2, .concept .inner .m-title h2 {
+.section-01 .inner .m-title h2, .concept .inner .m-title h2, .works .m-title h2 {
   -webkit-transform: rotate(90deg) translate(40%, 175%);
           transform: rotate(90deg) translate(40%, 175%);
   left: -30px;
 }
 
-.feature, .service, .blog, .footer {
+.feature, .service, .works, .blog, .footer {
   margin-top: 80px;
 }
 
@@ -239,6 +240,7 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
+  font-size: 14px;
 }
 
 .m-btn__more {
@@ -306,6 +308,7 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
+  font-size: 14px;
 }
 
 .m-btn__tel {
@@ -373,6 +376,7 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
+  font-size: 14px;
 }
 
 /*====================================================================
@@ -704,6 +708,163 @@ main {
   margin-bottom: 40px;
 }
 
+.works {
+  overflow: hidden;
+}
+
+.works .inner > p {
+  text-align: right;
+}
+
+.works-slider {
+  margin-top: 76px;
+}
+
+.m-txt {
+  margin-bottom: 40px;
+}
+
+.swiper-container {
+  position: relative;
+  width: 100%;
+  margin: 40px 0;
+  padding: 45px 0;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 0;
+  width: 3.6vw;
+}
+
+.swiper-button-next::before, .swiper-button-next::after,
+.swiper-button-prev::before,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-prev {
+  left: 86%;
+}
+
+.swiper-slide {
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+.swiper-slide__title, .swiper-slide__text {
+  display: none;
+}
+
+.swiper-slide__title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 42px;
+}
+
+.swiper-slide__text {
+  font-size: 14px;
+}
+
+.swiper-slide img {
+  width: 100%;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+  z-index: 1;
+  -webkit-transform: translateZ(0) scale(1.5) !important;
+          transform: translateZ(0) scale(1.5) !important;
+  /* スライドの大きさ調整 */
+}
+
+.swiper-slide-active .swiper-slide__title,
+.swiper-slide-active .swiper-slide__text {
+  display: block;
+}
+
+.works-btn {
+  padding-top: 80px;
+}
+
+.works-btn > div {
+  display: block;
+  margin: auto;
+}
+
+.works-btn > div:first-child {
+  margin-bottom: 24px;
+}
+
+.works-btn .m-btn__search {
+  background-color: #AEB6C7;
+  -webkit-transition: background-color .3s, border .3s;
+  transition: background-color .3s, border .3s;
+  width: 240px;
+  height: 40px;
+  border: 1px solid #AEB6C7;
+}
+
+.works-btn .m-btn__search a {
+  position: relative;
+}
+
+.works-btn .m-btn__search a::before {
+  position: absolute;
+  content: "";
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+  top: 50%;
+  right: 12px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-color: transparent transparent transparent #fff;
+  -webkit-transition: right 0.3s;
+  transition: right 0.3s;
+}
+
+.works-btn .m-btn__search:hover a::before {
+  right: 4px;
+  border-color: transparent transparent transparent #AEB6C7;
+}
+
+.works-btn .m-btn__search a {
+  color: #fff;
+}
+
+.works-btn .m-btn__search .svg {
+  fill: #fff;
+}
+
+.works-btn .m-btn__search:hover {
+  background-color: #fff;
+}
+
+.works-btn .m-btn__search:hover a {
+  color: #AEB6C7;
+}
+
+.works-btn .m-btn__search:hover svg {
+  fill: #AEB6C7;
+}
+
+.works-btn .m-btn__search a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  font-size: 14px;
+}
+
 .blog {
   background-image: url(../../img/pc/bg_index_02.png);
   background-position: center;
@@ -916,6 +1077,7 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
+  font-size: 14px;
 }
 
 .header__nav--tel:hover {

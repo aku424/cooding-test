@@ -333,6 +333,102 @@ main{
     }
 }
 
+//works
+.works{
+    overflow: hidden;
+    @extend %section-mt;
+    @extend %bg-style__left;
+    
+    .inner{
+        > p{
+            text-align: right;
+        }
+    }
+
+    &-slider{
+        margin-top: 76px;
+    }
+}
+
+.m-txt{
+    margin-bottom: 40px;
+}
+
+.swiper-container {
+    position: relative;
+    width: 100%;
+    margin: 40px 0;
+    padding: 45px 0;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+    position: absolute;
+    top: 0;
+    width: 3.6vw;
+    &::before,
+    &::after{
+        display: none;
+    }
+}
+
+.swiper-button-prev{
+    left: 86%;
+}
+.swiper-slide {
+    transition: .7s;
+
+    &__title,
+    &__text{
+        display: none;
+    }
+}
+
+.swiper-slide__title{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 42px;
+}
+
+.swiper-slide__text{
+    font-size: $fz-base;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+.swiper-slide-active {
+    opacity: 1;
+    z-index: 1;
+    transform:translateZ(0) scale(1.5) !important; /* スライドの大きさ調整 */
+
+    .swiper-slide__title,
+    .swiper-slide__text{
+        display: block;
+    }
+}
+
+
+.works-btn{
+    padding-top: 80px;
+
+    >div{
+        display: block;
+        margin: auto;
+
+        &:first-child{
+            margin-bottom: 24px;
+        }
+    }
+
+    .m-btn__search{
+        @include  m-arrow(#fff, $c-search,12px, 4px);
+        @include h-bg ($c-search, #fff, #fff, $c-search);
+        @include m-btn (40px, $c-search);
+    }
+}
+
 //blog
 .blog{
     @extend %section-mt;
