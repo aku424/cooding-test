@@ -548,6 +548,10 @@ main{
     .m-title{
         height: 60%;
 
+        @include mq(sm){
+            height: 400px;
+        }
+
         h2{
             @include mq(sm){
                 left: 19px;
@@ -567,10 +571,12 @@ main{
 }
 
 .m-txt{
+    position: relative;
     margin-bottom: 40px;
 }
 
 .works-text{
+    position: relative;
     padding-bottom: 90px;
 }
 
@@ -596,6 +602,10 @@ main{
     &:hover{
         opacity: .7;
     }
+
+    @include mq(sm){
+        display: none;
+    }
 }
 
 .swiper-button-prev{
@@ -614,6 +624,11 @@ main{
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 42px;
+
+    @include mq(sm){
+        margin-bottom: 18px;
+        font-size: 18px;
+    }
 }
 
 .swiper-slide__text{

@@ -1006,6 +1006,12 @@ main {
 }
 
 @media screen and (max-width: 768px) {
+  .works .m-title {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .works .m-title h2 {
     left: 19px;
   }
@@ -1020,10 +1026,12 @@ main {
 }
 
 .m-txt {
+  position: relative;
   margin-bottom: 40px;
 }
 
 .works-text {
+  position: relative;
   padding-bottom: 90px;
 }
 
@@ -1054,6 +1062,13 @@ main {
   opacity: .7;
 }
 
+@media screen and (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+}
+
 .swiper-button-prev {
   left: 86%;
 }
@@ -1071,6 +1086,13 @@ main {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 42px;
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-slide__title {
+    margin-bottom: 18px;
+    font-size: 18px;
+  }
 }
 
 .swiper-slide__text {

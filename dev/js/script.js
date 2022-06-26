@@ -13,16 +13,19 @@ $(function(){
     centeredSlides: true,
     loop: true,
     speed: 500,
-    slidesPerView:2,
+    slidesPerView: 1.5,
     spaceBetween: 40,
-    // autoplay: {
-    //     delay: 3000,
-    // },
+    autoplay: {
+        delay: 3000,
+    },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
     breakpoints: {
+        769: {
+            slidesPerView: 2,
+        }
     },
 });
 
