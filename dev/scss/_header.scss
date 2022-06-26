@@ -49,11 +49,31 @@
 
             a{
                 display: flex;
+                position: relative;
                 align-items: center;
                 flex-direction: column-reverse;
                 padding: 2px 4px;
                 color: $c-main;
                 font-size: $fz-nav__ja;
+                
+                &::before{
+                    position: absolute;
+                    content : "";
+                    width: 0%;
+                    height: 1px;
+                    background-color: $c-main;
+                    transform: translate(0%, -100%);
+                    bottom: -3px;
+                    left: 0;
+                    transition: width .3s;
+                    
+                }
+
+                &:hover{
+                    &::before{
+                        width: 100%;
+                    }
+                }
 
 
                 span{

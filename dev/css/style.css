@@ -500,6 +500,10 @@ main {
   height: fit-content;
 }
 
+.mv-news__item a:hover > p {
+  text-decoration: underline;
+}
+
 .concept .inner {
   margin-top: 93px;
 }
@@ -712,6 +716,10 @@ main {
   overflow: hidden;
 }
 
+.works .m-title {
+  height: 60%;
+}
+
 .works .inner > p {
   text-align: right;
 }
@@ -722,6 +730,10 @@ main {
 
 .m-txt {
   margin-bottom: 40px;
+}
+
+.works-text {
+  padding-bottom: 90px;
 }
 
 .swiper-container {
@@ -736,12 +748,19 @@ main {
   position: absolute;
   top: 0;
   width: 3.6vw;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
 }
 
 .swiper-button-next::before, .swiper-button-next::after,
 .swiper-button-prev::before,
 .swiper-button-prev::after {
   display: none;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  opacity: .7;
 }
 
 .swiper-button-prev {
@@ -915,6 +934,10 @@ main {
   color: #2D2D2D;
 }
 
+.blog a:hover > p {
+  text-decoration: underline;
+}
+
 .blog time {
   margin-right: 32px;
 }
@@ -992,6 +1015,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1002,6 +1026,24 @@ main {
   padding: 2px 4px;
   color: #192F60;
   font-size: 16px;
+}
+
+.header__nav--item a::before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: #192F60;
+  -webkit-transform: translate(0%, -100%);
+          transform: translate(0%, -100%);
+  bottom: -3px;
+  left: 0;
+  -webkit-transition: width .3s;
+  transition: width .3s;
+}
+
+.header__nav--item a:hover::before {
+  width: 100%;
 }
 
 .header__nav--item a span {
@@ -1185,6 +1227,12 @@ main {
   height: 48px;
   margin: auto;
   margin-bottom: 24px;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.footer-logo:hover {
+  opacity: .7;
 }
 
 .footer-address {
@@ -1194,10 +1242,16 @@ main {
 
 .footer small {
   text-align: center;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
 }
 
 .footer small a {
   color: #AEB6C7;
   font-size: 11px;
+}
+
+.footer small:hover {
+  opacity: .7;
 }
 /*# sourceMappingURL=style.css.map */
