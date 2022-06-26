@@ -25,4 +25,11 @@ $(function(){
     breakpoints: {
     },
 });
+
+
+// var ham = document.getElementById("ham");
+// var ham_menu = document.getElementById("ham_menu");
+$("#ham").click(function(){
+  $("#ham_menu").toggleClass("_open"); 
+})
 });

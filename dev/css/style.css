@@ -114,6 +114,12 @@ img {
   background-image: url(../../img/pc/bg_index_04.png);
 }
 
+@media screen and (max-width: 768px) {
+  .inner .m-title {
+    height: 400px;
+  }
+}
+
 .inner .m-title h2 {
   position: absolute;
   top: 50px;
@@ -880,6 +886,12 @@ main {
   right: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .service .m-title h2 {
+    right: 15px;
+  }
+}
+
 .service .inner > p {
   margin-bottom: 40px;
   position: relative;
@@ -991,6 +1003,12 @@ main {
 
 .works .m-title {
   height: 60%;
+}
+
+@media screen and (max-width: 768px) {
+  .works .m-title h2 {
+    left: 19px;
+  }
 }
 
 .works .inner > p {
@@ -1173,6 +1191,12 @@ main {
   height: 80%;
 }
 
+@media screen and (max-width: 768px) {
+  .blog .m-title h2 {
+    right: 75px;
+  }
+}
+
 .blog .inner {
   padding-top: 80px;
   padding-bottom: 27px;
@@ -1279,6 +1303,8 @@ main {
 
 @media screen and (max-width: 1025px) {
   .header {
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
     padding: 0 16px;
   }
 }
@@ -1363,6 +1389,11 @@ main {
   }
 }
 
+.header__nav ._open {
+  height: calc(100vh - 80px);
+  background-color: #fff;
+}
+
 .header__nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1384,7 +1415,7 @@ main {
     width: 100vw;
     height: 0;
     overflow: hidden;
-    top: 0;
+    top: 80px;
     left: 0;
     right: 0;
     bottom: 0;

@@ -8,6 +8,7 @@
     z-index: 999;
     
     @include mq(md){
+        box-sizing: content-box;
         padding: 0 16px;
     }
     
@@ -94,6 +95,11 @@
             }
         }
 
+        ._open{
+            height: calc(100vh - 80px);
+            background-color: #fff;
+        }
+
         ul{
             display: flex;
             justify-content: space-between;
@@ -106,7 +112,7 @@
                 height: 0;
                 // height: 100vh;
                 overflow: hidden;
-                top: 0;
+                top: 80px;
                 left: 0;
                 right: 0;
                 bottom: 0;
