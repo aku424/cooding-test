@@ -535,6 +535,10 @@ main{
                 margin-bottom: 40px;
             }
 
+            .m-btn__more{
+                margin: auto;
+            }
+
         }
     }
 }
@@ -698,6 +702,7 @@ main{
 
         @include mq(sm){
             padding-top: 100px;
+            padding-bottom: 80px;
         }
 
     }

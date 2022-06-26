@@ -1,5 +1,9 @@
 .footer{
     @extend %section-mt;
+
+    @include mq(sm){
+        margin-top: 0;
+    }
     p{
         color: #fff;
         text-align: center;

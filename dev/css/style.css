@@ -997,6 +997,10 @@ main {
   margin-bottom: 40px;
 }
 
+.service-content__desc .m-btn__more {
+  margin: auto;
+}
+
 .works {
   overflow: hidden;
 }
@@ -1227,6 +1231,7 @@ main {
 @media screen and (max-width: 768px) {
   .blog .inner {
     padding-top: 100px;
+    padding-bottom: 80px;
   }
 }
 
@@ -1356,6 +1361,12 @@ main {
 
 .header__logo a {
   display: block;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.header__logo a:hover {
+  opacity: .7;
 }
 
 .header__logo img {
@@ -1751,6 +1762,12 @@ main {
 /*====================================================================
                     footer
 ====================================================================*/
+@media screen and (max-width: 768px) {
+  .footer {
+    margin-top: 0;
+  }
+}
+
 .footer p {
   color: #fff;
   text-align: center;
