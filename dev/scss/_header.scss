@@ -1,10 +1,11 @@
 .header{
     height: 80px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, .8);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 999;
 
     &-inner{
         display: flex;
@@ -67,8 +68,8 @@
         &--tel{
             margin-left: 20px;
             @include  m-arrow;
-            @include h-bg (#fff, $c-main , $c-main, #fff);
-            @include m-btn (80px, #fff);
+            @include h-bg (rgba(255, 255, 255, 0), $c-main , $c-main, #fff);
+            @include m-btn (80px, rgba(255, 255, 255, 0));
             @extend %m-tel;
 
             &:hover{

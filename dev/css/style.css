@@ -106,7 +106,7 @@ img {
   position: absolute;
   content: "";
   width: calc((335 / 1156) * 100%);
-  padding-top: 54.56%;
+  height: 100%;
   top: 0;
   background-size: contain;
   background-position: center;
@@ -140,6 +140,10 @@ img {
   -webkit-transform: rotate(90deg) translate(40%, 175%);
           transform: rotate(90deg) translate(40%, 175%);
   left: -30px;
+}
+
+.feature {
+  margin-top: 80px;
 }
 
 /*====================================================================
@@ -538,16 +542,42 @@ main {
   margin-top: 40px;
 }
 
+.feature {
+  background-image: url(../../img/pc/bg_index_01.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.feature .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.feature-title-wrap p {
+  margin-bottom: 16px;
+}
+
+.feature-title-wrap p b {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.feature-title-wrap p .m-txt {
+  margin-bottom: 40px;
+}
+
 /*====================================================================
                     header
 ====================================================================*/
 .header {
   height: 80px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 999;
 }
 
 .header-inner {
@@ -631,12 +661,12 @@ main {
 
 .header__nav--tel {
   margin-left: 20px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0);
   -webkit-transition: background-color .3s, border .3s;
   transition: background-color .3s, border .3s;
   width: 240px;
   height: 80px;
-  border: 1px solid #fff;
+  border: 1px solid rgba(255, 255, 255, 0);
 }
 
 .header__nav--tel a {

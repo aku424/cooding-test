@@ -172,7 +172,8 @@ $ff-en: neue-haas-grotesk-text, sans-serif;//英語、数字
         position: absolute;
         content: "";
         width: calc((335 / 1156) * 100%);
-        padding-top: 54.56%;
+        // padding-top: 54.56%;
+        height: 100%;
         top: 0;
         background-size: contain;
         background-position: center;
@@ -226,4 +227,8 @@ $ff-en: neue-haas-grotesk-text, sans-serif;//英語、数字
     .inner{
         @extend %bg-style__right;
     }
+}
+
+%section-mt{
+    margin-top: 80px;
 }

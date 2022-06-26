@@ -161,6 +161,30 @@ main{
             margin-top: 40px;
         }
     }
+}
 
+.feature{
+    background-image: url(../../img/pc/bg_index_01.png);
+    background-size: cover;
+    background-position: center;
+    @extend %section-mt;
+    
+    .inner{
+        display: flex;
+    }
 
+    &-title-wrap{
+        p{
+            margin-bottom: 16px;
+
+            b{
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            .m-txt{
+                margin-bottom: 40px;
+            }
+        }
+    }
 }
