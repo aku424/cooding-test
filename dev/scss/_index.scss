@@ -7,11 +7,19 @@ main{
     background-size: cover;
     background-position: center;
     height: calc(100vh - 80px);
+
+    @include mq(sm){
+        background-image: url(../../img/sp/mv_index_01.png);
+    }
     
     &-inner{
         padding-left: 8.27%;
         position: relative;
         padding-top: calc(100vh - 80px) ;
+
+        @include mq(sm){
+            padding-left: 0;
+        }
     
     }
 
@@ -19,11 +27,25 @@ main{
         position: absolute;
         top: 15vw;
 
+        @include mq(sm){
+            padding-left: 15px;
+        }
+
         &__btn{
             display: flex;
+
+            @include mq(sm){
+                flex-direction: column;
+                align-items: center;
+            }
             
             .m-btn__tel{
                 margin-right: 80px;
+
+                @include mq(sm){
+                    margin-right: 0;
+                    margin-bottom: 40px;
+                }
             }
         }
         
@@ -38,6 +60,10 @@ main{
                     line-height: 1;
                     padding: 13px 16px;
                     margin-bottom: 6px;
+
+                    @include mq(sm){
+                        margin-bottom: 10px;
+                    }
         
                     &:last-child{
                         margin-bottom: 0;
@@ -49,10 +75,21 @@ main{
                 margin-bottom: 24px;
                 @extend %mv-text;
                 font-size: 18px;
+
+                @include mq(sm){
+                    font-size: 3.59vw;
+                }
+
+                
+                
         
                 strong{
                     @extend %mv-text;
                     font-size: 60px;
+
+                    @include mq(sm){
+                        font-size: 5.64vw;
+                    }
                 }
         
                 &:last-of-type{
@@ -72,7 +109,14 @@ main{
         width: calc((100% -  8.27%));
         padding: 26px 40px;
 
+        @include mq(sm){
+            padding: 26px 16px;
+            height: auto;
+            align-items: start;
+        }
+
         &__title{
+            height: 100%;
 
             span{
                 position: relative;
@@ -80,6 +124,22 @@ main{
                 font-weight: bold;
                 font-size: 22px;
                 padding-right: 22px;
+                
+                @include mq(sm){
+                    padding-right: 16px;
+                }
+
+            }
+        }
+        &__item{
+
+            a{
+                position: relative;
+                display: flex;
+                align-items: center;
+                padding-left: 8.64vw;
+                font-size: 16px;
+                color:  #2D2D2D;
 
                 &::before{
                     position: absolute;
@@ -88,18 +148,19 @@ main{
                     height: 26px;
                     background: $c-f__base;
                     top: 0;
-                    right: 0;
-                }
-            }
-        }
-        &__item{
+                    left: 0;
 
-            a{
-                display: flex;
-                align-items: center;
-                padding-left: 8.64vw;
-                font-size: 16px;
-                color:  #2D2D2D;
+                    @include mq(sm){
+                        height: 100%;
+                    }
+                }
+                
+                @include mq(sm){
+                    flex-direction: column;
+                    padding-left: 16px;
+                    align-items: start;
+                }
+                
 
                 time{
                     margin-right: 32px;
@@ -130,29 +191,70 @@ main{
         position: relative;
         margin-left: 10.836vw;
         z-index: 1;
+        
+        @include mq(sm){
+            margin-left: 0;
+            padding-top: 15vw;
+        }
 
         &__main{
             display: flex;
+            
+            @include mq(sm){
+                flex-direction: column;
+            }
 
             &-img{
+                @include mq(sm){
+                    width: 100%;
+                }
                 img{
                     max-width: 475px;
                     max-height: 317px;
                     width: 34.77vw;
                     height: 23.206vw;
+                    @include mq(sm){
+                        max-width: none;
+                        max-height: none;
+                        width: 100%;
+                        height: auto;
+                    }
+
                 }
             }
 
             &-text{
                 text-align: right;
 
+                @include mq(sm){
+                    margin-top: 24px;
+                    .m-txt{
+                        span{
+                            display: block;
+                            width: fit-content;
+                            text-align-last: left;
+                        }
+                    }
+                }
+
                 &--price{
                     font-size: 20px;
-                    margin-top: 38px;
+                    margin-top: 36px;
+
+                    @include mq(sm){
+                        text-align: center;
+                        letter-spacing: 1.6px;
+                        font-size: 4.1vw;
+                    }
                     
                     span{
                         font-size: 60px;
                         font-family: $ff-en;
+
+                        @include mq(sm){
+                            font-size: 9.23vw;
+                            letter-spacing: 3.6px;
+                        }
                     }
                 }
             }
@@ -174,41 +276,100 @@ main{
     background-size: cover;
     background-position: center;
     @extend %section-mt;
+
+    @include mq(sm){
+        background-image: none;
+    }
     
     .inner{
         display: flex;
+
+        @include mq(sm){
+            flex-direction: column;
+            padding: 0;
+        }
     }
 
     &-title-wrap{
         padding-top: 80px;
         max-width: 372px;
+
+        @include mq(sm){
+            background-color: $c-bg__compere;
+            padding: 40px 15px;
+            width: 100%;
+            max-width: none;
+        }
+
         p{
             margin-bottom: 16px;
+
+            @include mq(sm){
+                text-align: center;
+
+                // &:last-of-type{
+                //     text-align-last: left;
+                // }
+            }
 
             b{
                 font-size: 20px;
                 font-weight: bold;
+
+                @include mq(sm){
+                    font-size: 18px;
+                }
             }
 
             .m-txt{
                 margin-bottom: 40px;
             }
+
+            
         }
     }
 
     &-list{
         padding-top: 40px;
         padding-bottom: 40px;
-        margin-left: 0px;
         margin-left: 100px;
         transform: rotate(25deg);
+        
+        @include mq(sm){
+            position: relative;
+            transform: rotate(0deg);
+            margin-left: 0;
+            padding: 0 16px;
+            margin-top: 71px;
+            margin-bottom: 64.1vw;
+            
+            &::before{
+                position: absolute;
+                content:"";
+                width: 100%;
+                height: 120px;
+                background-color: $c-bg__compere;
+                transform: translate(-50%, -50%);
+                bottom: -55%;
+                left: 50%;
+            
 
+            }
+        }
+        
         &__item{
             display: flex;
             align-items: center;
             margin-bottom: 60px;
             transform: rotate(-25deg);
 
+            @include mq(sm){
+                transform: rotate(0deg);
+                display: block;
+                position: relative;
+                text-align: center;
+                margin-bottom: 85px;
+            }
 
             &:last-of-type{
                 margin-bottom: 0;
@@ -222,6 +383,21 @@ main{
                 font-weight: bold;
                 margin-right: 18px;
                 letter-spacing: 3.6px;
+
+                @include mq(sm){
+                    position: absolute;
+                    top: -10px;
+                    left: 0;
+                    line-height: 1;
+                    z-index: 0;
+                }
+            }
+
+            >div{
+                @include mq(sm){
+                    position: relative;
+                    z-index: 1;
+                }
             }
 
             strong{
@@ -230,6 +406,12 @@ main{
                 font-weight: bold;
                 margin-bottom: 10px;
                 color: $c-main;
+            }
+
+            p{
+                @include mq(sm){
+                    text-align-last: left;
+                }
             }
         }
     }
@@ -240,6 +422,7 @@ main{
     @extend %section-mt;
     @extend %bg-style__right;
 
+    
     .m-title{
         h2{
             right: 0;
@@ -249,7 +432,16 @@ main{
     .inner{
         >p{
             margin-bottom: 40px;
+            position: relative;
         }
+        
+        @include mq(sm){
+            padding-top: 87px;
+        }
+    }
+
+    .m-txt{
+        position: relative;
     }
 
     &-content{
@@ -260,6 +452,10 @@ main{
         ul{
             display: flex;
             justify-content: space-between;
+
+            @include mq(sm){
+                flex-direction: column;
+            }
         }
 
         li{
@@ -456,6 +652,10 @@ main{
     background-image: url(../../img/pc/bg_index_02.png);
     background-position: center;
     background-size: cover;
+
+    @include mq(sm){
+        background-image: url(../../img/sp/bg_index_01.png);
+    }
     .m-title{
         height: 80%;
     }
@@ -463,6 +663,10 @@ main{
     .inner{
         padding-top: 80px;
         padding-bottom: 27px;
+
+        @include mq(sm){
+            padding-top: 100px;
+        }
 
     }
 
@@ -476,6 +680,10 @@ main{
 
     ul{
         padding: 26px 95px 56px 95px;
+
+        @include mq(sm){
+            padding: 40px 24px;
+        }
     }
 
     li{
@@ -484,6 +692,14 @@ main{
         border-bottom: 1px solid #CACACA;
         padding-top: 44px;
         padding-bottom: 32px;
+
+        @include mq(sm){
+            flex-direction: column;
+
+            &:first-of-type{
+                padding-top: 0;
+            }
+        }
     }
 
     a{
@@ -491,6 +707,12 @@ main{
         align-items: center;
         font-size: 16px;
         color: #2D2D2D;
+
+        @include mq(sm){
+            flex-direction: column;
+            align-items: start;
+
+        }
 
         &:hover{
             > p{
@@ -501,5 +723,10 @@ main{
 
     time{
         margin-right: 32px;
+
+        @include mq(sm){
+            margin-bottom: 8px;
+            margin-right: 0;
+        }
     }
 }

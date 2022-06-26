@@ -21,6 +21,10 @@ p{
     padding: 0 32px;
     box-sizing: content-box;
     @extend %bg-style;
+
+    @include mq(sm){
+        padding: 0 16px;
+    }
 }
 
 .m-txt{

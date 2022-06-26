@@ -16,14 +16,31 @@
             font-size: 24px;
             letter-spacing: 2.4px;
             margin-bottom: 40px;
+            line-height: 2;
+
+            @include mq(sm){
+                letter-spacing: 1.8px;
+                font-size: 18px;
+
+            }
         }
 
         &__btn{
             display: flex;
             justify-content: center;
+            
+            @include mq(sm){
+                flex-direction: column;
+                align-items: center;
+            }
 
             .m-btn__tel{
                 margin-right: 80px;
+
+                @include mq(sm){
+                    margin-right: 0;
+                    margin-bottom: 40px;
+                }
             }
         }
     }
@@ -50,12 +67,15 @@
     &-address{
         font-size: 16px;
         margin-bottom: 40px;
+        
+        @include mq(sm){
+            font-size: $fz-base;
+        }
     }
-
     small{
         text-align: center;
         transition: opacity .3s;
-        
+
         a{
             color: $c-search;
             font-size: 11px;

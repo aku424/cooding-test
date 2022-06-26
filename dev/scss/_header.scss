@@ -6,16 +6,28 @@
     left: 0;
     right: 0;
     z-index: 999;
-
+    
+    @include mq(md){
+        padding: 0 16px;
+    }
+    
     &-inner{
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 100%;
+    
+        @include mq(md){
+            
+        }
     }
 
     &__logo{
         margin-left: 55px;
+
+        @include mq(md){
+            margin-left: 0;
+        }
 
         a{
             display: block;
@@ -28,8 +40,58 @@
     }
 
     &__nav{
+
         &--ham{
             display: none;
+
+            @include mq(md){
+                display: block;
+
+                button{
+                    position: relative;
+                    // visibility: hidden;
+                    border: none;
+                    background-color: inherit;
+                    width: 26px;
+                    height: 16px;
+
+                    %ham-bar{
+                        position: absolute;
+                        width: 26px;
+                        height: 2px;
+                        left: 50%;
+                        background-color: $c-main;
+
+                    }
+
+                    span{
+                        @extend %ham-bar;
+                        transform: translate(-50%, -50%);
+                        top: 50%;
+                        transition: opacity .3s;
+                        
+
+                        &::before,
+                        &::after{
+                            @extend %ham-bar;
+                            content : "";
+
+                        }
+                        &::before{
+                            transform: translate(-50%, 0%);
+                            top: 8px;
+                            transition: opacity .3s;
+
+                        }
+                        &::after{
+                            transform: translate(-50%, -50%);
+                            top: -8px;
+                            transition: opacity .3s;
+
+                        }
+                    }
+                }
+            }
         }
 
         ul{
@@ -37,6 +99,21 @@
             justify-content: space-between;
             width: fit-content;
             align-items: center;
+            
+            @include mq(md){
+                position: fixed;
+                width: 100vw;
+                height: 0;
+                // height: 100vh;
+                overflow: hidden;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                flex-direction: column;
+                transform: translate(0%, 0);
+                
+            }
         }
 
         &--item{
