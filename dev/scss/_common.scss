@@ -1,3 +1,8 @@
+*{
+    font-family: $ff-base;
+
+}
+
 a{
     text-decoration: none;
 }
@@ -28,13 +33,6 @@ p{
     @include h-bg ($c-main, #fff, #fff, $c-main);
     @include m-btn (56px, $c-main);
     @extend %m-tel;
-
-    a{
-        flex-flow: column;
-        &::before{
-            display: none;
-        }
-    }
 }
 
 .section{

@@ -43,8 +43,8 @@ $fz-nav__ja: 16px;
 $fz-nav__en: 13px;
 
 //font-family
-// $ff-base: ;//平成角ゴシックstd
-// $ff-en: ;//英語、数字
+$ff-base: heisei-kaku-gothic-std, sans-serif;//平成角ゴシック
+$ff-en: neue-haas-grotesk-text, sans-serif;//英語、数字
 
 //hoverしたら矢印が右に動く
 @mixin m-arrow($color: #fff, $a-color:#fff, $right: 0, $a-right: 0) {
@@ -79,7 +79,7 @@ $fz-nav__en: 13px;
 //hoverで背景反転
 @mixin h-bg ($b-bg, $a-bg, $b-c, $a-c) {
     background-color: $b-bg;
-    transition: background-color .3s;
+    transition: background-color .3s, border .3s;
     
     a{
         color: $b-c;
@@ -118,9 +118,16 @@ $fz-nav__en: 13px;
 //電話問い合わせの継承スタイル
 %m-tel{
     a{
+        flex-flow: column;
+
+        &::before{
+            display: none;
+        }
+
         span{
-            // font-family: $en;
+            font-family: $ff-en;
             font-size: 24px;
+            margin-bottom: 3px;
         }
 
         svg{
@@ -183,7 +190,7 @@ $fz-nav__en: 13px;
             font-size: 77px;
             color: $c-f__bg;
             display: inline-block;
-            // font-family: $en;
+            font-family: $ff-en;
         }
     }
 }
