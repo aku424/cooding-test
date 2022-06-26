@@ -283,6 +283,7 @@ main{
     
     .inner{
         display: flex;
+        overflow: hidden;
 
         @include mq(sm){
             flex-direction: column;
