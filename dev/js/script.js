@@ -26,10 +26,8 @@ $(function(){
     },
 });
 
-
-// var ham = document.getElementById("ham");
-// var ham_menu = document.getElementById("ham_menu");
+//ハンバーガーメニュー
 $("#ham").click(function(){
-  $("#ham_menu").toggleClass("_open"); 
+  $("#header__nav").toggleClass("_open"); 
 })
 });
