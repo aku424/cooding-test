@@ -1,5 +1,5 @@
 .footer{
-    
+    @extend %section-mt;
     p{
         color: #fff;
         text-align: center;

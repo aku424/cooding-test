@@ -19,7 +19,7 @@ p{
     max-width: 1154px;
     margin: auto;
     padding: 0 32px;
-    box-sizing: border-box;
+    box-sizing: content-box;
     @extend %bg-style;
 }
 

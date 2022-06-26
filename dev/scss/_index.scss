@@ -229,6 +229,109 @@ main{
     }
 }
 
+//service
+.service{
+    @extend %section-mt;
+    @extend %bg-style__right;
+
+    .m-title{
+        h2{
+            right: 0;
+        }
+    }
+    
+    .inner{
+        >p{
+            margin-bottom: 40px;
+        }
+    }
+
+    &-content{
+        max-width: 936px;
+        margin: auto;
+        position: relative;
+
+        ul{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        li{
+            flex-basis: calc((100% - 26px) / 3);
+
+            // @for $i from 2 to 4 {
+            //     &:nth-of-type(#{$i} - 1){
+            //         .service-content__title{
+            //             background-image: url(../../img/common/img_index_0{$i}.png);
+            //         }
+            //     }
+            // }
+            &:nth-of-type(1){
+                .service-content__title{
+                    background-image: url(../../img/common/img_index_02.png);
+                }
+            }
+            &:nth-of-type(2){
+                .service-content__title{
+                    background-image: url(../../img/common/img_index_03.png);
+                }
+            }
+            &:nth-of-type(3){
+                .service-content__title{
+                    background-image: url(../../img/common/img_index_04.png);
+                }
+            }
+        }
+
+        &__title{
+            position: relative;
+            background-position:center;
+            background-size: cover;
+            width: 100%;
+            padding-top: 66.558%;
+
+            h3{
+                position: absolute;
+                bottom: -4px;
+                left: 16px;
+
+                span{
+                    color: $c-main;
+
+                    &:first-of-type{
+                        display: block;
+                        width: fit-content;
+                        font-size: 20px;
+                        font-family: $ff-base;
+                        font-weight: bold;
+                        background-color: #fff;
+                        line-height: 1;
+                        padding: 10px 16px;
+                        margin-bottom: 4px;
+                        letter-spacing: 2px;
+                    }
+
+                    &:last-of-type{
+                        font-family: $ff-en;
+                        font-size: 11px;
+                        margin-bottom: 4px;
+                        margin-left: 16px;
+                    }
+                }
+            }
+        }
+
+        &__desc{
+            padding: 32px 16px 42px;
+            background-color: #fff;
+
+            p{
+                margin-bottom: 40px;
+            }
+
+        }
+    }
+}
 
 //blog
 .blog{
@@ -276,6 +379,5 @@ main{
 
     time{
         margin-right: 32px;
-        
     }
 }
